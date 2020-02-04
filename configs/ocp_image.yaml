@@ -13,5 +13,4 @@ spec:
     - domainName: registry.access.redhat.com
       insecure: false
   registrySources:
-    blockedRegistries:
-    - docker.io
+    blockedRegistries: {}
