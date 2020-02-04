@@ -4,4 +4,6 @@ metadata:
   annotations:
     release.openshift.io/create-only: "true"
   name: cluster
-spec: {}
+spec:
+  blockedRegistries:
+  - docker.io
