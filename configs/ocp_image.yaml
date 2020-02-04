@@ -6,4 +6,6 @@ metadata:
   name: cluster
 spec:
   registrySources:
-    blockedRegistries: []
+    blockedRegistries:
+    # docker.io should not be include unless argocd contaner images are on docker.io
+    - untrusted.com
