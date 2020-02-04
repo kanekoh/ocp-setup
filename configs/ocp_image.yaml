@@ -8,6 +8,10 @@ spec:
   allowedRegistriesForImport:
     - domainName: quay.io
       insecure: false
+    - domainName: registry.redhat.io
+      insecure: false
+    - domainName: registry.access.redhat.com
+      insecure: false
   registrySources:
     blockedRegistries:
     - docker.io
