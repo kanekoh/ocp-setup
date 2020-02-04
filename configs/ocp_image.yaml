@@ -6,5 +6,4 @@ metadata:
   name: cluster
 spec:
   registrySources:
-    blockedRegistries:
-    - docker.io
+    blockedRegistries: {}
