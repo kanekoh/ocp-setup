@@ -4,13 +4,4 @@ metadata:
   annotations:
     release.openshift.io/create-only: "true"
   name: cluster
-spec:
-  allowedRegistriesForImport:
-    - domainName: quay.io
-      insecure: false
-    - domainName: registry.redhat.io
-      insecure: false
-    - domainName: registry.access.redhat.com
-      insecure: false
-  registrySources:
-    blockedRegistries: {}
+spec: {}
