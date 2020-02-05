@@ -30,6 +30,7 @@ objects:
   - apiGroup: rbac.authorization.k8s.io
     kind: User
     name: ${PROJECT_ADMIN_USER}
+## Setting Default Network Policy
 - apiVersion: networking.k8s.io/v1
   kind: NetworkPolicy
   metadata:
@@ -59,6 +60,16 @@ objects:
     podSelector: {}
     policyTypes:
     - Ingress
+## Set EgressNetworkPolicy
+- apiVersion: v1
+  kind: EgressNetworkPolicy
+  metadata:
+    name: default
+  spec:
+    egress:
+      type: Deny
+      to:
+        cidrSelector: 0.0.0.0
 parameters:
 - name: PROJECT_NAME
 - name: PROJECT_DISPLAYNAME

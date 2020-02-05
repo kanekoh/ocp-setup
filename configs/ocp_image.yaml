@@ -5,7 +5,8 @@ metadata:
     release.openshift.io/create-only: "true"
   name: cluster
 spec:
-  registrySources:
-    blockedRegistries:
-    # docker.io should not be include unless argocd contaner images are on docker.io
-    - untrusted.com
+  allowedRegistriesForImport:
+    - domainName: quay.io
+    - domainName: registry.redhat.io
+    - domainName: registry.access.redhat.com
+    - domainName: docker.io
